@@ -1,0 +1,2 @@
+createsdk='sdk list java | head -n 5 > ~/installed_java_versions_$(date +"%Y%m%d").txt && sdk list java | grep -i installed >> ~/installed_java_versions_$(date +"%Y%m%d").txt && sdk list java | tail -n 10 >> ~/installed_java_versions_$(date +"%Y%m%d").txt'
+showsdk='cat ~/installed_java_versions_$(date +"%Y%m%d").txt'
