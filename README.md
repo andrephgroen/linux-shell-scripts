@@ -8,7 +8,7 @@ Clone the shell scripts from the github repo: https://github.com/andrephgroen/li
 
 Create link files in /usr/local/bin on your Linux computer to each of the available shell scripts by doing the following:
 ```shell
-E.g. ln -s /usr/local/bin/<shell-script> <preferred_shell_startup_name>
+E.g. ln -s <folder-to-shell-scripts>/<shell-script> <preferred_shell_startup_name>
 ```
 
 ## Disclaimer
