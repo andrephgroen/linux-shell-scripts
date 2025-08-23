@@ -11,6 +11,15 @@ Create link files in /usr/local/bin on your Linux computer to each of the availa
 E.g. ln -s <folder-to-shell-scripts>/<shell-script> <preferred_shell_startup_name>
 ```
 
+Attention:
+These shell scripts were made with MacOS (zsh). You'll need to adapt the scripts to bash in order to make them work for regular linux. 
+
+Following must be adapted:
+```shell
+1. #!/bin/zsh	-> #!/bin/bash
+2. cut -f -w	-> cut -f -d" "
+```
+
 ## Disclaimer
 There's no disclaimer on these shell scripts nor is there a license to it. So feel free to distribute but you are on your own!
 
