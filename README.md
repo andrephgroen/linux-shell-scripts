@@ -12,9 +12,9 @@ E.g. ln -s <folder-to-shell-scripts>/<shell-script> <preferred_shell_startup_nam
 ```
 
 Attention:
-These shell scripts were made with MacOS (zsh). You'll need to adapt the scripts to bash in order to make them work for regular linux. 
+In case you downloaded a previous version of this repository; you may need to transfer from macOS shell (zsh) to Linux shell (bash)
 
-Following must be adapted:
+If the previous is true, then on Linux the following must be adapted:
 ```shell
 1. #!/bin/zsh	-> #!/bin/bash
 2. cut -f -w	-> cut -f -d" "
