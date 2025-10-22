@@ -1,4 +1,4 @@
-#!/bin/zsh
+#!/bin/bash
 clear
 echo "Setting SDKMAN! environment..."
 export SDKMAN_DIR="$HOME/.sdkman"
