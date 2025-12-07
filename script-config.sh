@@ -1,18 +1,17 @@
 #!/bin/bash
 clear
+echo "Cleaning previous link files..."
+sudo rm /usr/local/bin/pip-*.sh /usr/local/bin/sdkman-*.sh
 export NUMSCRIPTS=$(ls ./pip*.sh ./sdkman*.sh | wc -l)
-echo "Aantal gevonden run-scripts: "${NUMSCRIPTS}
-echo "Tijdelijk bestand aanmaken..."
+echo "Number of run-scripts: "${NUMSCRIPTS}
+echo "Creating temporary list file..."
 ls ./pip*.sh ./sdkman*.sh > ./script-list.txt
-echo "Aanmaken link bestanden..."
-
-#for VAR in $(cat ./script-list.txt) ; do echo "Script: "${VAR} ; done
-
+echo "Creating link files..."
 for SCRIPT in $(cat ./script-list.txt) ;
 do
 	echo "Link aanmaken voor: "${SCRIPT}
 	sudo ln -s $(pwd)/${SCRIPT} /usr/local/bin/${SCRIPT}
 done;
-echo "Verwijderen tijdelijk bestand..."
+echo "Deleting temporary list file..."
 rm ./script-list.txt
-echo "Klaar!"
+echo "Ready!"
