@@ -11,6 +11,7 @@ Create link files in /usr/local/bin on your Linux computer to each of the availa
 [linux-shell-scripts]$>./script-config.sh
 ```
 
+## Disclaimer
 There's no disclaimer on these shell scripts nor is there a license to it. So feel free to distribute but you are on your own!
 
 ## Additional notes
