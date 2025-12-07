@@ -6,21 +6,11 @@ These shell-scripts were created to make life a little easier whilst conducting 
 ## Making things even easier
 Clone the shell scripts from the github repo: https://github.com/andrephgroen/linux-shell-scripts.git
 
-Create link files in /usr/local/bin on your Linux computer to each of the available shell scripts by doing the following:
+Create link files in /usr/local/bin on your Linux computer to each of the available shell scripts by running the following command in the "linux-shell-scripts" directory:
 ```shell
-E.g. ln -s <folder-to-shell-scripts>/<shell-script> <preferred_shell_startup_name>
+[linux-shell-scripts]$>./script-config.sh
 ```
 
-Attention:
-In case you downloaded a previous version of this repository; you may need to transfer from macOS shell (zsh) to Linux shell (bash)
-
-If the previous is true, then on Linux the following must be adapted:
-```shell
-1. #!/bin/zsh	-> #!/bin/bash
-2. cut -f -w	-> cut -f -d" "
-```
-
-## Disclaimer
 There's no disclaimer on these shell scripts nor is there a license to it. So feel free to distribute but you are on your own!
 
 ## Additional notes
