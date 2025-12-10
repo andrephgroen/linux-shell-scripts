@@ -14,6 +14,5 @@ do
 	sudo ln -s $(pwd)/${SCRIPT}.sh /usr/local/bin/${SCRIPT}
 done;
 echo "Deleting temporary list file..."
-rm ./script-list.txt
-rm ./script-list2.txt
+rm ./script-list*.txt
 echo "Ready!"
