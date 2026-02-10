@@ -1,8 +1,8 @@
 #!/bin/bash
 clear
 export LOCALBIN='/usr/local/bin'
-export NUMOFSCRIPTS=$(expr $(ls -ls ${LOCALBIN}/my-* ${LOCALBIN}/pip-* ${LOCALBIN}/sdkman-* ${LOCALBIN}/scan-* | cut -f 10,11,12,13 -d" " | wc -l))
+export NUMOFSCRIPTS=$(expr $(ls -ls ${LOCALBIN} | grep -i 'linux-shell-scripts' | wc -l))
 echo "Number of current available scripts: "${NUMOFSCRIPTS}
 echo "Script files:"
-ls -ls ${LOCALBIN}/my-* ${LOCALBIN}/pip-* ${LOCALBIN}/sdkman-* ${LOCALBIN}/scan-*| cut -f 10,11,12,13 -d" " | grep -i 'linux-shell-scripts' | sort
+ls -ls ${LOCALBIN} | grep -i 'linux-shell-scripts' | cut -f 11,12,13 -w | sort
 echo "Ready!"
