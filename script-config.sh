@@ -3,7 +3,7 @@ clear
 
 # Cleaning up previous link files if they exist
 export LOCALBIN="/usr/local/bin/"
-if [ -f ${LOCALBIN}/pip-* ] && [ -f ${LOCALBIN}/sdkman-* ] && [ -f ${LOCALBIN}/my-* ] && [ ${LOCALBIN}/scan-* ]; then
+if [[ -f ${LOCALBIN}/pip-* ]] || [[ -f ${LOCALBIN}/sdkman-* ]] || [[ -f ${LOCALBIN}/my-* ]] || [[ ${LOCALBIN}/scan-* ]]; then
 	echo "Cleaning previous link files..."
 	sudo rm ${LOCALBIN}/pip-* ${LOCALBIN}/sdkman-* ${LOCALBIN}/my-* ${LOCALBIN}/scan-*
 fi
@@ -24,7 +24,7 @@ echo "Creating link files in folder: "${LOCALBIN}
 for SCRIPT in $(cat ./script-list2.txt) ;
 do
 	echo "Creating link for: "${SCRIPT}
-	sudo ln -s $(pwd)/${SCRIPT}.sh /usr/local/bin/${SCRIPT}
+	sudo ln -s $(pwd)/${SCRIPT}.sh ${LOCALBIN}/${SCRIPT}
 done;
 
 # Removing redundent temporary list file
