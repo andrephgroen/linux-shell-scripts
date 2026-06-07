@@ -3,18 +3,18 @@ clear
 
 # Cleaning up previous link files if they exist
 export LOCALBIN="/usr/local/bin/"
-if [[ -f ${LOCALBIN}/pip-* ]] || [[ -f ${LOCALBIN}/sdkman-* ]] || [[ -f ${LOCALBIN}/my-* ]] || [[ ${LOCALBIN}/scan-* ]]; then
+if [[ -f ${LOCALBIN}/pip-* ]] || [[ -f ${LOCALBIN}/sdkman-* ]] || [[ -f ${LOCALBIN}/my-* ]] || [[ ${LOCALBIN}/scan-* ]] || [[ ${LOCALBIN}/git-* ]]; then
 	echo "Cleaning previous link files..."
-	sudo rm ${LOCALBIN}/pip-* ${LOCALBIN}/sdkman-* ${LOCALBIN}/my-* ${LOCALBIN}/scan-*
+	sudo rm ${LOCALBIN}/pip-* ${LOCALBIN}/sdkman-* ${LOCALBIN}/my-* ${LOCALBIN}/scan-* ${LOCALBIN}/git-*
 fi
 
 # Summarizing all available scripts from the installation folder"
-export NUMSCRIPTS=$(ls ./pip-*.sh ./sdkman-*.sh ./my-*.sh ./scan-*.sh | wc -l)
+export NUMSCRIPTS=$(ls ./pip-*.sh ./sdkman-*.sh ./my-*.sh ./scan-*.sh ./git-*.sh | wc -l)
 echo "Number of run-scripts: "${NUMSCRIPTS}
 
 # Creating temporary list file
 echo "Creating temporary list file..."
-ls pip-* sdkman-* my-* scan-* > ./script-list.txt
+ls pip-* sdkman-* my-* scan-* git-* > ./script-list.txt
 
 # Enhancing temporary list file
 cat ./script-list.txt | cut -f 1 -d"." > ./script-list2.txt

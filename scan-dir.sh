@@ -1,6 +1,6 @@
 #!/bin/bash
 clear
-export SCANFOLDER=$1
+export SCANFOLDER=$(pwd)
 export SCANTAG=$(echo $(date));
 echo "Scan versie: "$(clamscan -V) 
 echo "Scannen folder: "${SCANFOLDER}
