@@ -1,4 +1,15 @@
 # linux-shell-scripts
+## Script support
+| Script *) | Author       |
+|-----------|--------------|
+| Brew      | andrephgroen |
+| Git       | andrephgroen |
+| SDKMan!   | andrephgroen |
+| Pip       | andrephgroen |
+
+*) Version information only available in Git-Hub
+
+----
 
 ## Example shell scripts
 These shell-scripts were created to make life a little easier whilst conducting daily porposes.
@@ -17,4 +28,4 @@ There's no disclaimer on these shell scripts nor is there a license to it. So fe
 ## Additional notes
 PIP: These shell scripts use the Virtual Environment (venv)
 
-SDKMAN: The loading of the environment is needed as the scripts use a new (background) shell to start with and thus need the environment variables.
+SDKMAN: The loading of the environment is needed at script boot as the scripts use a new (background) shell to start with and consequently need the environment variables.
