@@ -6,6 +6,16 @@ export SDKMAN_DIR="$HOME/.sdkman"
 echo "'sdkman-show-previous-list' requires a reversed date input (e.g. yyyymmdd)"
 echo "Previous creation dates:"
 ls ~/Documents/jdk-versies | sed -e 's/ /\n/g' | cut -f 4 -d "_" | cut -f 1 -d "."
-echo "Showing date: "$1
-cat ~/Documents/jdk-versies/installed_java_versions_$1.txt
+if [[ $1 -eq "null" ]];
+then
+	echo "Empty date is not allowed, please follow instructions above!"
+fi
+if [ -f "/home/andre/Documents/jdk-versies/installed_java_versions_$1.txt" ];
+then
+	echo "Showing date: "$1
+	echo "Showing contents of ~/Documents/jdk-versies/installed-java-versions_"$1".txt"
+	cat ~/Documents/jdk-versies/installed_java_versions_$1.txt
+else
+	echo "Chosen date is not available!"
+fi
 echo "Ready!"
