@@ -16,7 +16,7 @@ else
 		echo "Showing contents of ~/Documents/jdk-versies/installed-java-versions_"$1".txt"
 		cat ~/Documents/jdk-versies/installed_java_versions_$1.txt
 	else
-		echo "Chosen date ["$1"] is not available!"
+		echo "Chosen date [ "$1" ] is not available!"
 	fi
 fi
 echo "Ready!"
