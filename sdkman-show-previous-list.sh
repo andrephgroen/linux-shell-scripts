@@ -8,14 +8,15 @@ echo "Previous creation dates:"
 ls ~/Documents/jdk-versies | sed -e 's/ /\n/g' | cut -f 4 -d "_" | cut -f 1 -d "."
 if [[ $1 -eq "null" ]];
 then
-	echo "Empty date is not allowed, please follow instructions above!"
-fi
-if [ -f "/home/andre/Documents/jdk-versies/installed_java_versions_$1.txt" ];
-then
-	echo "Showing date: "$1
-	echo "Showing contents of ~/Documents/jdk-versies/installed-java-versions_"$1".txt"
-	cat ~/Documents/jdk-versies/installed_java_versions_$1.txt
+	echo "No date given. Please follow instructions above..."
 else
-	echo "Chosen date is not available!"
+	if [ -f "/home/andre/Documents/jdk-versies/installed_java_versions_$1.txt" ];
+	then
+		echo "Showing date: "$1
+		echo "Showing contents of ~/Documents/jdk-versies/installed-java-versions_"$1".txt"
+		cat ~/Documents/jdk-versies/installed_java_versions_$1.txt
+	else
+		echo "Chosen date ["$1"] is not available!"
+	fi
 fi
 echo "Ready!"
