@@ -2,7 +2,7 @@
 clear
 echo "Setting SDKMAN! environment..."
 export SDKMAN_DIR="${HOME}/.sdkman"
-[[ -s "${SDKMAN_DIR}/current/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/current/bin/sdkman-init.sh"
+[[ -s "${SDKMAN_DIR}/bin/sdkman-init.sh" ]] && source "${SDKMAN_DIR}/bin/sdkman-init.sh"
 echo "'sdkman-show-previous-list' requires a reversed date input (e.g. yyyymmdd)"
 echo "Previous creation dates:"
 ls ${HOME}/Documents/jdk-versies | sed -e 's/ /\n/g' | cut -f 4 -d "_" | cut -f 1 -d "." | tail -n 12
