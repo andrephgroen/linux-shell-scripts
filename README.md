@@ -20,7 +20,7 @@ These shell-scripts were created to make life a little easier whilst conducting 
 Clone the shell scripts from the github repo: https://github.com/andrephgroen/linux-shell-scripts.git
 
 Create link files in /usr/local/bin on your Linux computer to each of the available shell scripts by running the following command in the "linux-shell-scripts" directory:
-```shell
+```[bash]
 [linux-shell-scripts]$>./script-config.sh
 ```
 
