@@ -7,7 +7,7 @@ echo "Creating list of Installed Java SDK's:"
 echo "-> Creating header"
 sdk list java | head -n 5 > ~/Documents/jdk-versies/installed_java_versions_$(date +"%Y%m%d").txt
 echo "-> Creating body"
-sdk list java | grep -e '[*]' >> ~/Documents/jdk-versies/installed_java_versions_$(date +"%Y%m%d").txt
+sdk list java | grep -F -e "* |" -e "+ |" >> ~/Documents/jdk-versies/installed_java_versions_$(date +"%Y%m%d").txt
 echo "-> Creating footer"
 sdk list java | tail -n 5 >> ~/Documents/jdk-versies/installed_java_versions_$(date +"%Y%m%d").txt
 echo "Showing results:"
