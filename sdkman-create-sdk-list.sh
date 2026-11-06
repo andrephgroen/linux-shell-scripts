@@ -1,5 +1,5 @@
 #!/bin/bash
-clear
+#clear
 echo "Setting SDKMAN! environment.."
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
@@ -12,4 +12,4 @@ echo "-> Creating footer"
 sdk list java | tail -n 5 >> ~/Documents/jdk-versies/installed_java_versions_$(date +"%Y%m%d").txt
 echo "Showing results:"
 cat ~/Documents/jdk-versies/installed_java_versions_$(date +"%Y%m%d").txt
-echo "Ready!"
+echo "sdkc is ready!"
